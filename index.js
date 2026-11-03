@@ -15,7 +15,7 @@ app.use("/api/usuarios", rutaUsuarios);
 app.use("/api/comentarios", rutaComentarios);
 
 mongoose
-  .connect(process.env.MONGO_URL)
+  .connect(process.env.MONGO_URL_LOCAL)
   .then(() => console.log("BBDD EN MARCHA"))
   .catch((error) => console.log("Error al conectar:", error));
 

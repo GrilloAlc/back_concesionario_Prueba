@@ -11,6 +11,7 @@ const signUp = async (req, res) => {
       username: req.body.username,
       email: req.body.email,
       password: passwordEncriptada,
+      rol: req.body.rol,
     });
     await usuario.save();
     res.status(201).send("Usuario registrado");

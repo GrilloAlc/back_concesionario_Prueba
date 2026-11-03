@@ -14,12 +14,13 @@ app.use("/api/peliculas", rutaPeliculas);
 app.use("/api/usuarios", rutaUsuarios);
 app.use("/api/comentarios", rutaComentarios);
 
-mongoose.connect(process.env.MONGO_URL)
-    .then(() => console.log("BBDD EN MARCHA"))
-    .catch(error => console.log("Error al conectar:", error));
+mongoose
+  .connect(process.env.MONGO_URL)
+  .then(() => console.log("BBDD EN MARCHA"))
+  .catch((error) => console.log("Error al conectar:", error));
 
-const PUERTO = process.env.PORT || 3000
+const PUERTO = process.env.PORT || 3000;
 
 app.listen(PUERTO, () => {
-    console.log("App en puerto 3000");
+  console.log("App en puerto 3000");
 });
